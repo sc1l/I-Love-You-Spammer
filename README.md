@@ -1,2 +1,5 @@
 # I-Love-You-Spammer
-I Love You 69%
+
+# how to use
+run script, then choose your type 
+use %d for 1 to nil (ex: i love you %d%)
