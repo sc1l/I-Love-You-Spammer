@@ -1,0 +1,28 @@
+import debugger, pyautogui
+
+debugger.info('version check will be added.')
+debugger.sinput('Select your message. (add %d for number. ex: i love you %d% to i love you 1%)')
+msg = input(">>> ")
+has = "%d" in msg
+
+ran = 0
+debugger.wait("Starting in 5 seconds", 5)
+write = ""
+
+def set():
+    global ran, msg, has
+    if has:
+        return msg % ran
+    else:
+        return msg
+
+while True:
+    set()
+    for i in range(0, 6):
+        pyautogui.write(" " * i + set()+"\n")
+        debugger.wait('Waiting for 0.3 seconds', 0.3)
+        ran += 1
+    for i in range(5, 0, -1):
+        pyautogui.write(" " * i + set()+"\n")
+        debugger.wait('Waiting for 0.3 seconds', 0.3)
+        ran += 1
